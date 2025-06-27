@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="BuildSure • Premium Construction and Architecture Solutions with stunning visuals and interactive experience."/>
+  <title>BuildSure • Elite Construction Experience</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+  <style>
+    :root {
+      --clr-bg:#f4f5f9;--clr-dark:#1c1c1e;--clr-light:#ffffff;--clr-primary:#102a43;--clr-accent:#f9a826;--radius:20px;--max-w:1300px;--transition:.4s cubic-bezier(.22,1,.36,1);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;background:var(--clr-bg);color:var(--clr-dark);overflow-x:hidden;}img{max-width:100%;border-radius:var(--radius);}a{text-decoration:none;color:inherit;}
+    /* HEADER */
+    header{position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,.6);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.04);} .logo{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--clr-accent);} nav{display:flex;gap:2rem;font-weight:600;} nav a{position:relative;transition:color var(--transition);} nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--clr-accent);transition:width var(--transition);} nav a:hover,nav a.active{color:var(--clr-accent);} nav a:hover::after,nav a.active::after{width:100%;}.hamburger{display:none;font-size:2rem;cursor:pointer;}@media(max-width:860px){nav{position:absolute;top:100%;right:0;background:var(--clr-light);flex-direction:column;width:100%;max-height:0;overflow:hidden;transition:max-height .5s ease;}nav.open{max-height:600px;}nav a{padding:1rem 1.5rem;border-bottom:1px solid #eee;}.hamburger{display:block;}}
+    /* GLOBAL SECTIONS */
+    section{padding:7rem 1.5rem;} .inner{max-width:var(--max-w);margin:auto;text-align:center;} h2.title{font-size:clamp(2.4rem,5vw,3.5rem);margin-bottom:1rem;font-weight:900;} p.lead{font-size:1.2rem;max-width:750px;margin:0 auto 3rem;line-height:1.7;}
+    /* HERO SWIPER */
+    .hero-swiper{width:100%;height:100vh;} .hero-swiper .swiper-slide{position:relative;width:100%;height:100vh;display:flex;align-items:center;justify-content:flex-start;padding-left:2rem;background-size:cover;background-position:center;} .hero-swiper .overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.7),rgba(0,0,0,.15));z-index:1;border-radius:0;} .hero-content{position:relative;z-index:2;color:var(--clr-light);text-align:left;max-width:680px;} .hero-content h1{font-size:clamp(3rem,7vw,5rem);font-weight:900;line-height:1.1;margin-bottom:1rem;} .hero-content .lead{text-align:left;margin:0 0 1.5rem 0;} .btn{display:inline-block;padding:.95rem 2.6rem;background:var(--clr-accent);color:var(--clr-light);border-radius:50px;font-weight:700;transition:transform .3s;} .btn:hover{transform:translateY(-6px);} @media(max-width:600px){.hero-swiper .swiper-slide{padding-left:1rem;}}
+    .hero-pagination{position:absolute;bottom:35px;left:2rem;z-index:3;} .hero-pagination .swiper-pagination-bullet{background:var(--clr-light);opacity:.6;} .hero-pagination .swiper-pagination-bullet-active{background:var(--clr-accent);opacity:1;}
+    /* SWIPER (Projects) */
+    .swiper.projects{width:100%;max-width:var(--max-w);margin:2rem auto;} .projects .swiper-slide img{width:100%;height:400px;object-fit:cover;border-radius:var(--radius);}  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Yah Homes</div>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="#testimonials">Testimonials</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="nav.classList.toggle('open')"><i class="fas fa-bars"></i></div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <div class="hero-swiper swiper" id="home">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=3840&q=80');">
+        <span class="overlay"></span>
+        <div class="hero-content">
+          <h1>Elevating Skylines, One Dream at a Time</h1>
+          <p class="lead">Premium building, architecture, and engineering services tailored to your vision.</p>
+          <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=3840&q=80');">
+        <span class="overlay"></span>
+        <div class="hero-content">
+          <h1>Building Landmarks for the Future</h1>
+          <p class="lead">From concept to creation, we bring monumental projects to life.</p>
+          <a href="#projects" class="btn">View Projects</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- Pagination Bullets -->
+    <div class="swiper-pagination hero-pagination"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // HERO SWIPER
+    new Swiper('.hero-swiper',{
+      effect:'fade',
+      loop:true,
+      autoplay:{delay:4000,disableOnInteraction:false},
+      speed:1200,
+      pagination:{el:'.hero-pagination',clickable:true},
+      slidesPerView:1
+    });
+    // PROJECTS SWIPER
+    new Swiper('.projects',{
+      loop:true,
+      autoplay:{delay:3000,disableOnInteraction:false},
+      slidesPerView:1,
+      spaceBetween:20,
+      speed:800,
+      breakpoints:{768:{slidesPerView:2},1024:{slidesPerView:3}}
+    });
+  </script>
+</body>
+</html>
